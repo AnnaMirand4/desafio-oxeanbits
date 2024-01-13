@@ -9,7 +9,7 @@ const Tabela = () => {
     useEffect (() => {
         const getPost = async () => {
             try {
-                const response = await axios.get('https://jsonplaceholder.typicode.com/posts')
+                const response = await axios.get('https://jsonplaceholder.typicode.com/comments')
                 setPost(response.data)
                 
             } catch (error) {
@@ -25,7 +25,9 @@ const Tabela = () => {
             <h1>Tabela de Posts</h1>
             <Grid data={post} style={{ height: 540 }}>
                 <GridColumn field="id" title="ID" />
-                <GridColumn field="title" title="Post"/>
+                <GridColumn field="name" title="Título"/>
+                <GridColumn field="email" title="Email"/>
+                <GridColumn field='body' title='Conteúdo'/>
             </Grid>
         </div>
       )
