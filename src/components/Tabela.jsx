@@ -22,12 +22,12 @@ const Tabela = () => {
     
       return (
         <div>
-            <h1>Tabela de Posts</h1>
-            <Grid data={post} style={{ height: 540 }}>
-                <GridColumn field="id" title="ID" />
-                <GridColumn field="name" title="Título"/>
-                <GridColumn field="email" title="Email"/>
-                <GridColumn field='body' title='Conteúdo'/>
+            
+            <Grid data={post} style={{ height: 450 }} scrollable='scrollable' mobile={true}>
+                <GridColumn field="id" title="ID" width={100} media="(min-width:400px)" />
+                <GridColumn field="name" title="Título" width={250} media="(min-width:400px)" />
+                <GridColumn field="email" title="Email" width={250} media="(min-width:400px)" />
+                <GridColumn field='body' title='Conteúdo' width={250} media="(min-width:600px)" />
             </Grid>
         </div>
       )
