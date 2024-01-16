@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Grid , GridColumn} from '@progress/kendo-react-grid'
 
+
 const Tabela = () => {
     const [post, setPost] = useState([]);
 
@@ -24,6 +25,7 @@ const Tabela = () => {
         <div>
             
             <Grid data={post} style={{ height: 450 }} scrollable='scrollable' mobile={true}>
+            
                 <GridColumn field="id" title="ID" width={100} media="(min-width:400px)" />
                 <GridColumn field="name" title="Título" width={250} media="(min-width:400px)" />
                 <GridColumn field="email" title="Email" width={250} media="(min-width:400px)" />
